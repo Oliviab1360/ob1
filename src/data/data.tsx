@@ -12,7 +12,7 @@ import {Hero, HomepageMeta, TimelineItem} from './dataDef';
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'Fiona Lopez',
+  title: 'Olivia Brouillette',
   description: ' ',
 };
 
@@ -35,7 +35,7 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 export const heroData: Hero = {
   actions: [
     {
-      href: '/assets/Fiona_Lopez_CV.pdf', // Ensure the CV is placed in the public/assets directory
+      href: '/assets/Brouillette_CV.pdf', // Ensure the CV is placed in the public/assets directory
       Icon: ArrowDownTrayIcon,
       primary: true,
       text: 'Curriculum Vitae (CV)',
@@ -49,13 +49,13 @@ export const heroData: Hero = {
   description: (
     <div>
       <p className="text-lg text-gray-200">
-        I'm a graduate student pursuing my PhD in Astronomy at New Mexico State University, with a B.S. in Physics. My
-        research interests focus on galaxy clusters and high-redshift galaxies.
+        I'm a graduate student pursuing my PhD in Astronomy at New Mexico State University, with a B.S. in Mathematics and Physics. My
+        research interests focus on computational planetesimal formation.
       </p>
     </div>
   ),
   imageSrc: heroImage,
-  name: `Fiona Lopez`,
+  name: `Olivia Brouillette`,
   profilePic: profileImage, // Add this line to include the profile image
 };
 
@@ -64,50 +64,51 @@ export const heroData: Hero = {
  */
 export const research: TimelineItem[] = [
   {
-    date: 'Summer 2024-Present',
-    location: 'Maria Mitchell Association/Remote',
+    date: 'Fall 2024-Present',
+    location: 'New Mexico State University',
     title: 'Research Assistant', //
     content: (
       <p>
-        I started as a National Science Foundation Research Experiences for Undergraduates (NSF REU) intern at the Maria
-        Mitchell Association during the summer of 2024. Since then I have continued working with Dr. Mónica Relaño, with
-        whom I collaborated with there. I have been studying the interplay between dust, gas, and stars in high-redshift
-        galaxies as part of the CRISTAL survey ([CII] Resolved ISM in Star-forming Galaxies with ALMA). This survey
-        investigates the gas, dust, and stars in representative sample of star-forming galaxies at redshifts of z ~ 4-5
-        on kiloparsec-spatially resolved scales. Specifically, I utilized JWST observations to create emission line maps
-        for two galaxies within this sample. To analyze these maps, I processed the data in Python and performed
-        Gaussian fiting to extract emission lines. based on these emission line maps, I derived estimates of the gas,
-        dust, and star distributions within the galaxies, all through Python. Our findings are currently being prepared
-        for publication.
+        I have been working with Dr. Wladimir Lyra on the streaming instability using the Pencil code.
+        My first project was part of a larger collaboration effort to compare the streaming instability 
+        across multiple hydrodynamic codes in an unstratified shearing box. The current project I am working on, 
+        as part of my planned thesis research, is determining strong clumping in streaming instability simulations 
+        based on the parameters given in the dispersion relation rather than the dust-to-gas surface density ratio, 
+        which has no physical interpretation. We hope that by using the dust-to-gas volume density ratio instead, 
+        we will be able to draw a clear path between the bifurcation seen in the dispersion relation at a dust-to-gas 
+        volume density ratio of order unity and what is seen in the simulations for the strong clumping regime of the 
+        streaming instability.
+
+
       </p>
     ),
   },
   {
-    date: 'Fall 2023-Present',
-    location: 'University of Utah',
-    title: 'Research Assistant', //
+    date: 'Fall 2022-Spring 2024',
+    location: 'Iowa State University',
+    title: 'Undergraduate Research Assistant', //
     content: (
       <p>
-        I started as a National Science Foundation Research Experiences for Undergradutes (NSF REU) intern at the
-        University of Utah during the summer of 2023. Since then I have continued working with Dr. Daniel Wik, with whom
-        I collaborated with there. I used NuSTAR observations of 10 relaxed galaxy clusters to measure their
-        temperatures and compared them with measurements from Chandra and XMM-Newton in identical regions. This process
-        involved NuSTAR observations using light curve filtering, background characterization, and global spectral
-        extraction/fitting. All of this work was done in IDL and Xspec (spectral fitting program). Our findings are
-        currently being submitted for publication.
+        I worked with Dr. Jacob B. Simon at Iowa State University, where we worked mainly in computational astrophysics, 
+        specifically in planet formation. We used high-performance computing and the Athena code to simulate planetesimal 
+        formation. We worked to determine the conditions for planetesimals to form via the streaming instability in a 
+        three-dimensional simulation. I focused on two parameters that determine the streaming instability efficiency: 
+        grain size and dust-to-gas surface density ratio (Z). Through this project, we aimed to establish conditions for 
+        planetesimal formation that were more realistic than previous studies. By varying these two parameters, we were 
+        able to determine a critical value of Z for which each grain size can potentially form planetesimals.
       </p>
     ),
   },
   {
-    date: 'Fall 2022-Spring 2023',
-    location: 'Texas A&M University',
-    title: 'Research student', //
+    date: 'Summer 2021-Winter 2021',
+    location: 'Iowa State University',
+    title: 'Undergraduate Research student', //
     content: (
       <p>
         {' '}
-        I was in a group of undergraduate students, led by Dr. Rolan Allen, which explored the potential evidence for a
-        dark matter particle with second-gauge couplings. I contributed in calculating the cross-section of the proposed
-        particle using Monte Carlo integration in Python.
+        I worked in a group, led by Dr. Halil Ceylan, which explored the use of small Unmanned Aircraft Systems to 
+        inspect transportation infrastructure. I contributed in inspecting airport runways, aprons, and taxiways using 
+        pre-made drone operations, as well as generating 3D spatial data via Agisoft Metashape and ArcGIS Pro using the data.
       </p>
     ),
   },
@@ -119,11 +120,14 @@ export const publications = {
     {
       citation: (
         <>
-          <strong>F. Lopez</strong>, D. R. Wik, C. Potter, R. A. Rojas Bolivar, A. Tümer, D. Eckert, F. Gastaldello, B.
-          R. Grefenstette, K. Madsen, B. Maughan, E. D. Miller, G. Schellenberger, and A. N. Wallbank{' '}
+          S.A. Baronett, W. Lyra, A. Hossam, <strong>O. Brouillette</strong>, Daniel Carrera, Victoria I. De Cun, Linn E. J.
+          Eriksson, Mario Flock, Pinghui Huang, Leonardo Krapp, Geoffroy Lesur, Rixin Li, Shengtai Li, Jeonghoon
+          Lim, Sijme-Jan Paardekooper, David G. Rea, Debanjan Sengupta, Jacob B. Simon, Prakruti Sudarshan, Orkan
+          M. Umurhan, Chao-Chin Yang, Andrew N. Youdin, {' '}
           {/* prettier-ignore */}
           <em>
-            “Cross-Calibration of Galaxy Cluster Temperatures Measured with NuSTAR, XMM-Newton, and Chandra,” Accepted, pending ApJ publication
+            “A Comparative Study of the Streaming Instability: Unstratified Models with Marginally Coupled Grains
+          (2026),”  submitted to Astrophysical Journal, in review, Mar. 2026, doi:10.48550/arXiv.2603.04558.
           </em>
         </>
       ),
@@ -131,15 +135,15 @@ export const publications = {
     {
       citation: (
         <>
-          R. Allen, B. Tallman, A. Boone, A. Vijayakumar, <strong>F. Lopez</strong>, S. Apata, and J. Martinez,
+          J. Lim, J.B. Simon, R. Li,<strong>O. Brouillette</strong>, David G. Rea, Wladimir Lyra,
           <em>
-            “Potential for Definitive Discovery of a 70GeV Dark Matter WIMP with Only Second-Order Gauge Couplings,”{' '}
+            “The Streaming Instability in 3D: Conditions for Strong Clumping,”{' '}
             <a
-              href="https://doi.org/10.31526/lhep.2023.342"
+              href="doi: 10.48550/arXiv.2509.18270"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline">
-              LHEP 2023 (2023) 342
+               Sept. (2025)
             </a>
           </em>
         </>
@@ -148,16 +152,15 @@ export const publications = {
     {
       citation: (
         <>
-          B. Tallman, A. Boone, C. LaFontaine, T. Croteau, Q. Ballard, S. Hernandez, S. Ellis, A. Vijayakumar,{' '}
-          <strong>F. Lopez</strong>, S. Apata, J. Martinez, and R. Allen{' '}
+          Md. A. A. Sourav, H. Ceylan, C. Brooks, D. Peshkin, S. Kim, R. Dobson, C. Cook, M. Mahedi, <strong>O. Brouillette</strong>...{' '}
           <em>
-            “Indirect detection, direct detection, and collider detection cross-sections for a 70 GeV dark matter WIMP,”{' '}
+            “Small Unmanned Aircraft System for Pavement Inspection: Task 4—Execute the Field Demonstration Plan and Analyze the Collected Data,”{' '}
             <a
-              href="https://doi.org/10.22323/1.414.0988"
+              href="https://doi.org/10.21949/1524511"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline">
-              PoS ICHEP2022 (2022) 988
+              Nov. 2022
             </a>
           </em>
         </>
@@ -165,65 +168,16 @@ export const publications = {
     },
 
     // Add more papers as needed
-  ],
-  posters: [
-    {
-      citation: (
-        <>
-          <strong>F. Lopez</strong>, M. Relaño, "Investigating the role of interstellar dust, gas and stars in
-          high-redshift galaxies using ALMA and JWST observations", 245th American Astronomical Society Meeting, poster
-          session, 2025.
-        </>
-      ),
-    },
-    {
-      citation: (
-        <>
-          <strong>F. Lopez</strong>, D. Wik, and C. Potter, "Galaxy Cluster Temperatures: Solving the Discrepancy​
-          Between Chandra and XMM-Newton Using NuSTAR's Precision​", 243rd American Astronomical Society Meeting, poster
-          session, 2024.
-        </>
-      ),
-    },
-    {
-      citation: (
-        <>
-          B. Tallman, A. Boone, C. LaFontaine, T. Croteau, Q. Ballard, S. Hernandez, S. Ellis, A. Vijayakumar,
-          <strong>F. Lopez</strong>, S. Apata, J. Martinez, and R. Allen, "Potential for Evidence of a Dark Matter
-          Particle with Second Order Gauge Couplings​", American Physics Society Texas Section Meeting, presentation,
-          2022.
-        </>
-      ),
-    },
-    // Add more posters as needed
-  ],
-};
+  ]
 
 // data.tsx
 export const outreach = [
   {
-    location: 'Texas A&M University',
-    title: 'Department of Physics & Astronomy',
+    location: 'New Mexico State University',
+    title: 'Outreach Coordinator 2025-Present',
     content: `
-    I volunteered as a Physics Demo Presenter at various
-    department outreach events, including the TAMU Physics Festival, First
-    Friday in Historic Downtown Bryan, and the TAMU EnVision Conference. Whether
-    engaging the local community at First Friday or contributing to our largest event,
-    the Physics Festival, I've enjoyed sharing the excitement of physics with the community.
-    One of my favorite demonstrations to present is the Van de Graaff generator.
+    Organize volunteer work for NMSU astronomy students with the local community.
   `,
     imageSrc: [outreachImage, outreachImage2], // Use StaticImageData type here
-  },
-  {
-    location: 'Maria Mitchell Association',
-    title: 'Loines Observatory',
-    content: `
-    I worked open nights at Loines Observatory, where I guided participants
-    on a special evening of stargazing. On some nights, I led tours of Nantucket's night sky, 
-    helping visitors identify constellations. On other nights, I operated the 24-inch refracting telescope
-    or the 8-inch reflecting telescope, allowing visitors to observe the Moon,
-    stars, nebulae, and globular clusters. 
-  `,
-    imageSrc: [Loines, moon], // Use StaticImageData type here
-  },
+  }
 ];
