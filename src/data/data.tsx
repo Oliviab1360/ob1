@@ -4,8 +4,6 @@ import profileImage from '../images/profile.jpg';
 import heroImage from '../images/header-background.webp';
 import outreachImage from '../images/outreach_1.webp'; // Static image import
 import outreachImage2 from '../images/outreach_2.jpg';
-import Loines from '../images/Loines.jpg';
-import moon from '../images/moon.jpg';
 import {Hero, HomepageMeta, TimelineItem} from './dataDef';
 
 /**
