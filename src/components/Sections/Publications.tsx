@@ -4,8 +4,8 @@ import Section from '../Layout/Section'; // Internal import
 
 const PublicationsSection = memo(() => {
   // Separate papers and posters
-  const researchPapers = publications.papers;
-  const conferencePosters = publications.posters;
+  const researchPapers = publications.papers ?? [];
+  const conferencePosters = publications.posters ?? [];
 
   return (
     <Section sectionId={SectionId.Publications} className="bg-black text-white">
