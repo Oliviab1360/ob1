@@ -1,7 +1,12 @@
 /* eslint-env node */
 
-// https://github.com/vercel/next.js/blob/master/packages/next/next-server/server/config.ts
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  basePath: isProd ? '/ob1' : '',
+  assetPrefix: isProd ? '/ob1/' : '',
   webpack: config => {
     const oneOfRule = config.module.rules.find(rule => rule.oneOf);
 
@@ -22,8 +27,8 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   reactStrictMode: true,
   swcMinify: true,
-  trailingSlash: false,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
