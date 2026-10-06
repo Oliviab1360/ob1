@@ -32,8 +32,7 @@ const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(({children, title, 
       </Head>
 
       {/* 🔽 Background wrapper added here */}
-      <div style={{ backgroundColor: '#f0f2f5', minHeight: '100vh' }}>{children}</div>
-
+      <div style={{backgroundColor: '#f0f2f5', minHeight: '100vh'}}>{children}</div>
     </>
   );
 });

@@ -31,21 +31,23 @@ const PublicationsSection = memo(() => {
       </div>
 
       {/* Conference Posters Subsection */}
-      <div className="mb-6">
-        <h3 className="text-2xl font-semibold text-gray-200 mb-4">Posters and Presentations</h3>
-        <ul className="space-y-6">
-          {conferencePosters.map((item, index) => (
-            <li key={index} className="p-4 bg-gray-800 rounded-xl shadow-md">
-              {item.citation && (
-                <div className="text-gray-200">
-                  {/* No italic here, allow selective styling */}
-                  {item.citation}
-                </div>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
+      {conferencePosters.length > 0 && (
+        <div className="mb-6">
+          <h3 className="text-2xl font-semibold text-gray-200 mb-4">Posters and Presentations</h3>
+          <ul className="space-y-6">
+            {conferencePosters.map((item, index) => (
+              <li key={index} className="p-4 bg-gray-800 rounded-xl shadow-md">
+                {item.citation && (
+                  <div className="text-gray-200">
+                    {/* No italic here, allow selective styling */}
+                    {item.citation}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </Section>
   );
 });
