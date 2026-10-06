@@ -120,10 +120,10 @@ export const collaborations: {name: string; content: JSX.Element}[] = [
     name: 'PFITS+ (Planet Formation in the Southwest +)',
     content: (
       <p>
-        I am part of PFITS+, a collaboration of researchers studying how protoplanetary disks build planets, from dust
-        coagulation and pebble accretion to planetesimal formation through the streaming instability. The group runs
-        multi-code comparison projects that benchmark the streaming instability across hydrodynamic codes including
-        Pencil Code, Athena, and Athena++. More on the collaboration can be found on the{' '}
+        I am part of PFITS+, a collaboration of researchers studying the formation of planetesimals, from dust
+        coagulation and pebble accretion to planetesimal formation through the streaming instability. The group recently
+        ran multi-code comparison that benchmarks the streaming instability across hydrodynamic codes including Pencil
+        Code, Athena, and Athena++. More on the collaboration can be found on the{' '}
         <a
           href="https://pfitsplus.github.io/research/planet-formation/"
           target="_blank"
