@@ -4,6 +4,7 @@ import profileImage from '../images/profile.jpeg';
 import heroImage from '../images/header-background.webp';
 import outreachImage from '../images/outreach_1.jpg'; // Static image import
 import outreachImage2 from '../images/outreach_2.jpg';
+import {withBasePath} from '../config';
 import {Hero, HomepageMeta, TimelineItem} from './dataDef';
 
 /**
@@ -33,7 +34,7 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 export const heroData: Hero = {
   actions: [
     {
-      href: '/assets/Brouillette_CV.pdf', // Ensure the CV is placed in the public/assets directory
+      href: withBasePath('/assets/Brouillette_CV.pdf'), // Ensure the CV is placed in the public/assets directory
       Icon: ArrowDownTrayIcon,
       primary: true,
       text: 'Curriculum Vitae (CV)',
@@ -135,7 +136,7 @@ export const publications: {papers: {citation: JSX.Element}[]; posters: {citatio
           <em>
             “The Streaming Instability in 3D: Conditions for Strong Clumping,”{' '}
             <a
-              href="doi: 10.48550/arXiv.2509.18270"
+              href="https://doi.org/10.48550/arXiv.2509.18270"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline">

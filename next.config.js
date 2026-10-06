@@ -1,12 +1,16 @@
 /* eslint-env node */
 
 const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/ob1' : '';
 
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: isProd ? '/ob1' : '',
+  basePath,
   assetPrefix: isProd ? '/ob1/' : '',
+  env: {
+    NEXT_PUBLIC_BASEPATH: basePath,
+  },
   webpack: config => {
     const oneOfRule = config.module.rules.find(rule => rule.oneOf);
 
