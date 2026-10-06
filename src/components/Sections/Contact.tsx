@@ -13,12 +13,18 @@ const Contact: FC = React.memo(() => {
           <p className="mt-2">
             Department of Astronomy
             <br />
+            Office #107
+            <br />
             New Mexico State University
             <br />
             Las Cruces, NM 88001
             <br />
-            <a href="mailto:fl@nmsu.edu" className="text-blue-500 hover:underline">
-              fl@nmsu.edu
+            <a href="mailto:ob1@nmsu.edu" className="text-blue-500 hover:underline">
+              ob1@nmsu.edu
+            </a>
+            <br />
+            <a href="tel:+17639990768" className="text-blue-500 hover:underline">
+              763-999-0768
             </a>
           </p>
         </div>
