@@ -1,5 +1,5 @@
 import React, {memo} from 'react'; // Memo import added
-import {research, SectionId} from '../../data/data'; // External import
+import {collaborations, research, SectionId} from '../../data/data'; // External import
 import Section from '../Layout/Section'; // Internal import
 
 const ResearchSection = memo(() => {
@@ -22,6 +22,16 @@ const ResearchSection = memo(() => {
             {/* Date in smaller font (light grey) */}
             <div className="text-sm text-gray-400">{item.date}</div>
 
+            <div className="text-gray-200">{item.content}</div>
+          </li>
+        ))}
+      </ul>
+      {/* Collaborations */}
+      <h3 className="mt-12 text-3xl font-bold text-white">Collaborations</h3>
+      <ul className="mt-4 space-y-6">
+        {collaborations.map((item, index) => (
+          <li key={index} className="border-l-4 border-blue-500 pl-4">
+            <div className="text-2xl font-bold text-white">{item.name}</div>
             <div className="text-gray-200">{item.content}</div>
           </li>
         ))}
