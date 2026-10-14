@@ -1,7 +1,7 @@
 /* eslint-disable no-irregular-whitespace */
 import {ArrowDownTrayIcon} from '@heroicons/react/24/outline';
 import profileImage from '../images/profile.jpeg';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/frame_0022.png';
 import outreachImage from '../images/outreach_1.jpg'; // Static image import
 import outreachImage2 from '../images/outreach_2.jpg';
 import {withBasePath} from '../config';
